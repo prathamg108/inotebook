@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const URI="mongodb://localhost:27017/inNotebook";
+const URI="mongodb+srv://prathamg108:1234567890@cluster1.bdwu4fs.mongodb.net/test";
 
 const connectMongo=()=>{
     mongoose.connect(URI,()=>{

@@ -68,7 +68,7 @@ const AddNote = () => {
         </div>
       </div>
       <div className="container my-3" onClick={handleClick} >
-        <button style={{backgroundColor:"#4e4e5e",color:"white",borderRadius: "10px"}} disabled={note.title.length<5 ||note.description.length<5}>Submit</button>
+        <button style={{backgroundColor:"#4e4e5e",color:"white",borderRadius: "10px"}} disabled={note.title.length<5 ||note.description.length<5}>Submit</button>                                      
       </div>
     </>
   );

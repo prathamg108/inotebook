@@ -5,17 +5,20 @@ const Login = () => {
   const [credential, setCredential] = useState({ email: "", password: "" });
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-    const response = await fetch(`http://localhost:5000/api/auth/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: credential.email,
-        password: credential.password,
-      }),
-    });
+    e.preventDefault();
+    const response = await fetch(
+      `mongodb+srv://prathamg108:1234567890@cluster1.bdwu4fs.mongodb.net/test/api/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: credential.email,
+          password: credential.password,
+        }),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {

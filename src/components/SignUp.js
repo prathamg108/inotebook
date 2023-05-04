@@ -12,7 +12,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password } = credential;
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+    const response = await fetch(`mongodb+srv://prathamg108:1234567890@cluster1.bdwu4fs.mongodb.net/test/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
